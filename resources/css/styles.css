@@ -289,9 +289,6 @@ footer #demoby {
     img {
         display: none;
     }
-    #login {
-        display:inherit !important;
-    }
     .hero-buttons {
         padding-top: 10rem;
         gap: 2rem;
