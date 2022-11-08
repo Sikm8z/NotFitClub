@@ -59,10 +59,9 @@ header {
     justify-content: space-between;
     position: fixed;
     z-index: 99;
-    height: 7rem;
     top: 0;
 	left: 0;
-    flex-wrap:nowrap;
+    flex-wrap:column wrap;
     background-color: white;
     flex-wrap:none;
     overflow:hidden;
@@ -125,7 +124,8 @@ header img {
     background-repeat: none;
     height: 50rem;
     width: 100%;
-    display: flexbox;
+    display: inline-flexbox;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     margin-top: 7rem;
@@ -148,7 +148,7 @@ header img {
 .hero-buttons {
     padding-top: 10rem;
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
 }
 
 .hero-buttons button {
@@ -178,46 +178,30 @@ header img {
     width: 100%;
     padding-top: 3rem;
     background-color:darkgrey;
-    display: block;
-    grid-template-columns: repeat(2, 3fr);
-    justify-content: right;
+    display: grid;
+    flex-wrap: column wrap;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.about-image {
-    position: absolute;
-} 
 .about-image img {
     height: auto;
     width: 51rem;
 }
 
-.about-txt, .mission-txt {
-    margin-left: 50rem;
-    position: relative;
-    margin-right: 0;
+.about-txt {
     color: white;
 }
-.about-txt {
-    padding-top: 2rem;
-}
-.mission-txt {
-    padding-top: 5rem;
-}
-.about-txt h1 {
+
+.about-txt h1, h2 {
     padding-bottom: 2rem;
     line-height: 1.5rem;
 }
-.mission-txt h2 {
+
+.about-txt p {
+    text-align: left;
     padding-bottom: 2rem;
-    padding-top: 2rem;
-    line-height: 1.5rem;
+    line-height: 1rem;
 }
-
-.about-txt p, .mission-txt p {
-    padding-left: 10rem;
-    text-align: justify;
-}
-
 .services {
     background-image: url(../images/splash/alexander-jawfox-Kl2t5U6Gkm0-unsplash.jpg);
     background-size: cover;
@@ -244,7 +228,7 @@ header img {
     padding-top: 10rem;
     display:grid;
     justify-items:center;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 3fr);
     flex-wrap: column wrap;
 }
 .service-buttons button {
@@ -296,4 +280,25 @@ footer #demoby {
 
 /*-- 4. Module Styles --*/
 
-
+@media only screen and (max-width: 1199px) {
+    * {
+        zoom: fit-content;
+        font-size: 50%;
+        width: fit-content;
+    }
+    img {
+        display: none;
+    }
+    #login {
+        display:inherit !important;
+    }
+    .hero-buttons {
+        padding-top: 10rem;
+        gap: 2rem;
+        display:grid;
+        align-items: center;
+        float:none;
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 0;
+    }
+}
