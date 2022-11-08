@@ -78,6 +78,8 @@ header img {
 }
 
 #navigation li {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
     padding: 0 2rem 0 1rem;
 }
 #navigation a {
@@ -282,20 +284,70 @@ footer #demoby {
 
 @media only screen and (max-width: 1199px) {
     * {
-        zoom: fit-content;
         font-size: 50%;
         width: fit-content;
     }
     img {
         display: none;
     }
-    .hero-buttons {
-        padding-top: 10rem;
-        gap: 2rem;
-        display:grid;
-        align-items: center;
-        float:none;
-        grid-template-columns: repeat(3, 1fr);
-        margin-right: 0;
+    header {
+        width: 100%;
     }
+    body {
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        width:100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        width: 100%;
+        line-height: 3.5rem;
+    }
+    #navigation {
+        justify-content:stretch;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        white-space:inherit;
+    }
+    .hero {
+        height: 60%;
+    }
+    .hero-buttons {
+        gap: 0.5rem;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .about {
+        display:flex;
+        height: 60%;
+    }
+    .services {
+        height: 60%;
+        padding-top: 25%;
+    }
+    .services .service-buttons {
+        float: none;
+        width: 100%;
+    }
+    .contact {
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .details, .details p {
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
 }
